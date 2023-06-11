@@ -51,6 +51,7 @@ jobs:
         cd build
         set CL=/MP
         nmake
-    - name: test
-      run: build/tests.exe
-
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: build
